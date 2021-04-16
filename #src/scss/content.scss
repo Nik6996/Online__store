@@ -1,0 +1,181 @@
+.header-logo {
+	text-align: center;
+	font-family: Stalinist One;
+	align-items: center;
+    font-size: calc(16px + 80 * (100vw / 1370));
+    text-transform: uppercase;
+	color: #ffffff;
+	&__color{
+		color: #F7F6F3;
+	}
+	&__width{
+	
+	}
+	&__header-bottom1{
+		
+	}
+	&__header-bottom{
+	    position: relative;
+	    top: calc(-10px + -57 * (100vw / 1370));
+		font-family: Montserrat;
+        font-weight: bold;
+        font-size: calc(5px + 23 * (100vw / 1370));
+        text-align: center;
+        text-transform: uppercase;
+        color: #EE7444;
+}
+	
+}
+
+
+.price {
+background: url(../img/Background.jpg);
+padding: 70px 0px 130px 0px ;
+// position: relative;
+// top: -40px;
+	&__list {
+	}
+}
+.list-price {
+
+	&__lists {
+		padding: 30px 0px 0px 0px ;
+		display: flex;
+		justify-content: center;
+				:hover{
+					border: 5px solid #EE7444;
+				}
+				flex-wrap: wrap;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+        text-align: center;
+		width: 133px;
+		height: 167px;
+		cursor: pointer;
+	}
+
+&__img{
+	width: 100%;
+	height: 100%;
+	background: url(../img/Group.svg) no-repeat center;
+	margin: 0 auto;
+	padding: 70px 0px 0px 0px ;
+	border: none !important;
+}
+
+&__name{
+	margin: 0 auto;
+	width: 95px;
+	height: 100%;
+		font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #1A1A1A;
+		border: none !important;
+}
+
+}
+
+.carts {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1130px;
+	margin: 0 auto;
+	padding: 30px 0px 0px 0px ;
+
+}
+.cart {
+display: flex;
+flex-direction: column;
+flex: 1 1 33.333%;
+padding: 33px 0px 0px 0px ;
+@media (max-width: 670px) {
+align-items: center;
+}
+
+
+
+&__shell{
+	padding: 0px 24px 0px 24px ;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+max-width: 339px;
+height: 519px;
+background-color: white;
+
+@media (max-width: 380px) {
+	padding: 0px 10px 0px 10px ;
+}
+}
+
+	&__img {
+		padding: 24px 0px 0px 0px ;
+		max-width: 293px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	&__title {
+		
+		display: flex;
+		justify-content: space-between;
+		font-family: Montserrat;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 24px;
+        text-transform: uppercase;
+		letter-spacing: 0.6px;
+		span{
+			font-family: Montserrat;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 26px;
+		}
+	}
+
+	&__description {
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 26px;
+	}
+
+	&__bottom {
+	}
+}
+.bottom-cart {
+display: flex;
+justify-content: space-between;
+padding: 0px 0px 20px 0px ;
+	&__price {
+padding: 18px 0px 0px 0px ;
+font-family: Montserrat;
+font-weight: 600;
+font-size: 36px;
+line-height: 26px;
+color: #EE7444;
+span{
+	font-size: 20px;
+}
+	}
+
+	&__button {
+		cursor: pointer;
+		padding: 18px 0px 0px 0px ;
+		width: 133px;
+		height: 58px;
+		text-align: center;
+		vertical-align: middle;
+font-family: Teko;
+font-weight: 600;
+font-size: 18px;
+text-transform: uppercase;
+color: #EE7444;
+border: 5px solid #EE7444;
+	}
+}
