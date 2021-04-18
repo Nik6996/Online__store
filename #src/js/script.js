@@ -25,3 +25,29 @@ new Swiper('.image-slider', {
 	//ЭФФЕКТЫ
 	effect: 'fade',
 });
+
+new Swiper('.slider-extra', {
+	navigation: {
+		nextEl: '.button-next',
+		prevEl: '.button-prev'
+	},
+	// autoplay: {
+	// 	delay: 2000,
+	// 	stopOnLastSlide: false,
+	// 	disableOnInteraction: false
+	// },
+	slidesPerView: 3,
+	breakpoints: {
+		1100: {
+			slidesPerView: 3,
+		},
+		750: {
+			slidesPerView: 2,
+		},
+		400: {
+			slidesPerView: 1,
+		},
+
+	}
+
+})

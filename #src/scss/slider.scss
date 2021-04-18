@@ -16,7 +16,7 @@
 		}
 }
 .swiper-container {
-		width: 100%;
+		max-width: 100%;
 	    position: relative;
 	    top: -70px;
 		height: 575px;
@@ -44,10 +44,11 @@
 
 }
 .image-slider .swiper-pagination-bullet{
+	
 	width: 40px;
 	height: 10px;
-	color: blue;
-	border-radius: 0;
+	background-color: #EE7444;
+	border-radius: 20px;
 }
 
 .image-slider {

@@ -1,0 +1,154 @@
+.product {
+	max-width: 1000px;
+		&__body {
+			display: flex;
+			justify-content: space-around;
+		}
+	
+		&__img {
+			margin: 0px 20px 0px 0px ;
+			img{
+				max-width: 100%;
+			}
+		}
+	
+		&__cart {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	
+		&__column {
+		}
+	
+		&__title {
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 24px;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	color: #1A1A1A;
+	@media (max-width: 700px) {
+		font-size: 23px;
+	}
+		}
+	
+		&__weight {
+			margin: 19px 0px 6px 0px ;
+	font-family: Montserrat;
+	font-size: 14px;
+	line-height: 26px;
+	color: #6B6966;
+	@media (max-width: 700px) {
+		margin: 10px 0px 0px 0px ;
+	}
+		}
+	
+		&__decription {
+	font-family: Montserrat;
+	font-size: 14px;
+	line-height: 26px;
+	color: #6B6966;
+		}
+	
+		&__quantity {
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 105px;
+			height: 60px;
+	border: 5px solid #F6F5F1;
+	box-sizing: border-box;
+	border-radius: 0px;
+	@media (max-width: 700px) {
+		width: 75px;
+		height: 50px;
+	}
+			span{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #000000;
+			}
+		}
+	
+		&__btn {
+	width: 165px;
+	height: 60px;
+	background-color: #EE7444;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: 700px) {
+		width: 100px;
+		height: 50px;
+		margin: 0px 20px 0px 0px ;
+	}
+	span{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	}
+		}
+	
+		&__price {
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 26px;
+	color: #EE7444;
+	margin: 0px 0px 38px 0px ;
+	@media (max-width: 700px) {
+		font-size: 26px;
+		margin: 0px 0px 15px 0px ;
+	}
+		}
+		&__btns{
+			display: flex;
+		justify-content: space-between;
+	
+		}
+		padding: 0px 0px 40px 0px ;
+	}
+	
+
+	.extra {
+		padding: 45px 0px 180px 0px ;
+	background: url(../img/Background.jpg);
+	width: 100%;
+	
+		&__body {
+			margin: 0 auto;
+			
+			padding: 40px 0px 0px 0px ;
+		}
+	
+		&__slider {
+			height: 520px;
+		}
+		&__btn{
+			display: flex;
+			justify-content: center;
+			:hover{
+				color: black;
+			}
+		}
+		&__next,&__prev{
+	position: relative;
+	top: -30px;
+	font-size: 60px;
+	color: chocolate;
+	cursor: pointer;
+		}
+		&__prev{
+	margin: 0px 50px 0px 0px ;
+		}
+	}

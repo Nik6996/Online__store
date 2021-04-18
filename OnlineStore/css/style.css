@@ -217,7 +217,7 @@
 }
 
 .swiper-container {
-  width: 100%;
+  max-width: 100%;
   position: relative;
   top: -70px;
   height: 575px;
@@ -226,8 +226,8 @@
 .image-slider .swiper-pagination-bullet {
   width: 40px;
   height: 10px;
-  color: blue;
-  border-radius: 0;
+  background-color: #EE7444;
+  border-radius: 20px;
 }
 
 .header-logo {
@@ -338,6 +338,7 @@
 }
 
 .cart__shell {
+  margin: 0 auto;
   padding: 0px 24px 0px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,6 +837,266 @@
   margin-bottom: 58px;
 }
 
+.category__body {
+  background: url(../img/Category.jpg) no-repeat;
+  width: 100%;
+  height: 373px;
+  position: relative;
+  top: -70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.category__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.category__links {
+  margin: 13px 0px 0px 0px;
+}
+
+.category__links span {
+  font-family: Overpass Mono;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.category__link {
+  font-family: Overpass Mono;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page {
+  padding: 90px 0px 0px 0px;
+}
+
+.page__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page__column {
+  color: #1A1A1A;
+  background-color: #FFFFFF;
+  margin: 0px 40px 0px 0px;
+}
+
+.page__column :hover {
+  color: #FFFFFF;
+  background-color: black;
+}
+
+.page__btn {
+  padding: 4px 0px 0px 0px;
+  width: 60px;
+  height: 60px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 52px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.price {
+  padding: 70px 0px 80px 0px;
+}
+
+.product {
+  max-width: 1000px;
+  padding: 0px 0px 40px 0px;
+}
+
+.product__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.product__img {
+  margin: 0px 20px 0px 0px;
+}
+
+.product__img img {
+  max-width: 100%;
+}
+
+.product__cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #1A1A1A;
+}
+
+.product__weight {
+  margin: 19px 0px 6px 0px;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 26px;
+  color: #6B6966;
+}
+
+.product__decription {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 26px;
+  color: #6B6966;
+}
+
+.product__quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 105px;
+  height: 60px;
+  border: 5px solid #F6F5F1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.product__quantity span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.product__btn {
+  width: 165px;
+  height: 60px;
+  background-color: #EE7444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__btn span {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.product__price {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 26px;
+  color: #EE7444;
+  margin: 0px 0px 38px 0px;
+}
+
+.product__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.extra {
+  padding: 45px 0px 180px 0px;
+  background: url(../img/Background.jpg);
+  width: 100%;
+}
+
+.extra__body {
+  margin: 0 auto;
+  padding: 40px 0px 0px 0px;
+}
+
+.extra__slider {
+  height: 520px;
+}
+
+.extra__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.extra__btn :hover {
+  color: black;
+}
+
+.extra__next,
+.extra__prev {
+  position: relative;
+  top: -30px;
+  font-size: 60px;
+  color: chocolate;
+  cursor: pointer;
+}
+
+.extra__prev {
+  margin: 0px 50px 0px 0px;
+}
+
 .container {
   max-width: 1370px;
   margin: 0 auto;
@@ -1087,6 +1348,32 @@ h6 {
   }
 }
 
+@media (max-width: 700px) {
+  .product__title {
+    font-size: 23px;
+  }
+
+  .product__weight {
+    margin: 10px 0px 0px 0px;
+  }
+
+  .product__quantity {
+    width: 75px;
+    height: 50px;
+  }
+
+  .product__btn {
+    width: 100px;
+    height: 50px;
+    margin: 0px 20px 0px 0px;
+  }
+
+  .product__price {
+    font-size: 26px;
+    margin: 0px 0px 15px 0px;
+  }
+}
+
 @media (max-width: 670px) {
   .cart {
     -webkit-box-align: center;
@@ -1138,3 +1425,7 @@ h6 {
 .webp .price{ background: url(../img/Background.webp); }
 
 .webp .news{ background: url(../img/Background.webp); }
+
+.webp .category__body{ background: url(../img/Category.webp) no-repeat; }
+
+.webp .extra{ background: url(../img/Background.webp); }
