@@ -10,6 +10,9 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		@media (max-width: 450px) {
+			top: -30px;
+		}
 	}
 
 	&__title {

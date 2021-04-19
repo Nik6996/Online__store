@@ -19,7 +19,7 @@
 		max-width: 100%;
 	    position: relative;
 	    top: -70px;
-		height: 575px;
+		//height: 575px;
 		@media (max-width: 450px) {
 			top: -30px;
 		}
@@ -49,13 +49,17 @@
 	height: 10px;
 	background-color: #EE7444;
 	border-radius: 20px;
+	@media (max-width: 340px) {
+display: none;
+	}
 }
 
 .image-slider {
 
 	&__image {
 		img{
-			// max-width: 100%;
+	    max-width: 100%;
+		max-height: none;
 		}
 	}
 }

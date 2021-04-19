@@ -7,10 +7,11 @@
 	color: #ffffff;
 	&__color{
 		color: #F7F6F3;
+		@media (max-width: 340px) {
+		font-size: 30px;
+		}
 	}
-	&__width{
 	
-	}
 	&__header-bottom1{
 		
 	}

@@ -22,10 +22,9 @@ padding: 10px 0px 0px 0px ;
 
 	&__cart {
 		margin: 0 auto;
+
 	}
 
-
-	
 
 	&__btn {
 		display: flex;
@@ -53,7 +52,12 @@ padding: 10px 0px 0px 0px ;
 
 
 .cart-news {
-    width: 519px;
+	margin: 0px 10px 0px 10px ;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+    max-width: 519px;
     min-height: 735px;
 	height: auto; 
 	background-color:white ;
@@ -64,8 +68,13 @@ padding: 10px 0px 0px 0px ;
 		max-width: 360px;
 	}
 
+
 	&__img {
     padding: 0px 0px 39px 0px ;
+	img{
+		
+		max-width: 100%;
+	}
 	}
 
 	&__title {
