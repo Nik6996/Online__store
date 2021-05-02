@@ -48,6 +48,11 @@ padding-top: 20px;
 			top: 12px;
 		}
 	}
+	&__facebook:hover , &__instagram:hover{
+		background-color: rgb(73, 66, 66);
+		box-shadow: 0 0 15px #777;
+		transition: 0.4s;
+	}
 
 	&__links {
 	}

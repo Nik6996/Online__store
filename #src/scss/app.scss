@@ -1,5 +1,7 @@
 .app {
 padding: 0px 0px 150px 0px ;
+max-width: 1370px;
+margin: 0 auto;
 	&__container {
 		display: flex;
 		flex-wrap: wrap;

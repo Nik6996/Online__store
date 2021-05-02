@@ -1,5 +1,6 @@
 .product {
 	max-width: 1000px;
+	margin: 0 auto;
 		&__body {
 			display: flex;
 			justify-content: space-around;
@@ -77,6 +78,7 @@
 		}
 	
 		&__btn {
+			cursor: pointer;
 	width: 165px;
 	height: 60px;
 	background-color: #EE7444;
@@ -96,7 +98,16 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: #FFFFFF;
+	transition: 0.4s;
 	}
+		}
+		&__btn:hover{
+			background-color: #EE7444 ;
+			transition: 0.4s;
+			box-shadow: 0px 0px 15px #EE7444;
+			span{
+				color: black
+			}
 		}
 	
 		&__price {

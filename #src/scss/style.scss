@@ -32,10 +32,12 @@
 
 	 
 		 
-		.container{
+		.main{
 			max-width: 1370px;
 			margin: 0 auto;
+			position: relative;
 		}
+
 	 
 
   //---ШРИФТ ПО УМОЛЧАНИЮ---//
@@ -52,35 +54,257 @@
 
 
 
-   .basket {
+
+
+
+
+.body2{
+	display: flex;
+	justify-content: space-between;
+}
+
+//================================================basket=================================================
+.curt {
+	border-top: solid 5px rgb(187, 90, 0);
+display: flex;
+flex-wrap: wrap;
+	&__column {
+flex: 1 1 auto;
+
+p{
+	width: auto;
+	font-size: 25px;
+	font-family: "Mntserrat";
+	text-align: center;
+	margin: 20px 0px 0px 0px ;
+}
+	}
+}
+
+.form {
+max-width: 600px;
+margin: 0 auto;
+padding: 30px 0px 0px 0px ;
 
 	&__body {
+		margin: 0 auto;
+
 	}
 
-	&__column {
+	&__title {
+		font-family: "Montserrat";
+		font-size: 40px;
+margin: 0px 0px 30px 0px ;
 	}
 
-	&__adress {
+	&__item {
+		margin: 20px 0px 0px 0px ;
 	}
 
-	&__var {
+	&__lable {
+		font-family: "Montserrat";
+		font-weight: 600;
+		margin: 0px 0px 0px 0px ;
+		font-size: 23px;
+		display: block;
+		margin: 0px 0px 10px 0px ;
 	}
 
-	&__delivery {
-		p{
-			border: solid 3px black;
-		}
-		border: solid 3px black;
-		input{
-border: solid 3px black;
-		}
+&__test{
+	font-size: 20px;
+}
+
+	&__input {
+		height: 40px;
+		padding: 0px 20px ;
+		width: 100%;
+		font-size: 20px;
+		border: solid 2px blue;
+		
+	}
+
+	&__input._error{
+		box-shadow: 0 0 15px red;
+	}
+	
+	&__input:focus{
+		box-shadow: 0 0 15px #777;
+	}
+
+	&__button {
+		margin: 20px 0px 0px 0px ;
+		width: 100%;
+		min-height: 80px;
+		border-radius: 10px;
+		background-color: rgb(157, 201, 90);
+		color:white;
+        font-size: 25px;
+		box-shadow: 0 5px 0 black;
+		transition: background-color  1.9s;
+		
+	}
+	&__button:hover{
+		background-color: rgb(54, 218, 182);
+		color: black;
+		
+	}
+
+}
+
+
+	
+
+
+.select {
+	width: 200px;
+	height: 30px;
+}
+.checkbox {
+
+	&__input {
+		display: none;
+	}
+	&__input:checked + &__lable::after{
+		transform: scale(1);
+	}
+	&__lable{
+font-size: 18px;
+display: inline-flex;
+position: relative;
+cursor: pointer;
+	}
+	&__lable::before{
+		content: '';
+		align-self: flex-start;
+		margin-right: 10px;
+        flex: 0 0 24px;
+        height: 24px;
+        background-color: brown;
+        border-radius: 4px;
+		
+	}
+	&__lable::after{
+		transition: transform 0.5s;
+		content: '';
+    width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	background-color: green;
+	border-radius: 4px;
+	transform: scale(0);
 	}
 }
 
 
 
 
+//=========================================================Login======================================================================================================
+.login.active{
+	display: flex;
+	transition: 1s;
+}
 
 
 
+.login { 
+	display: none;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 244, 255, 0.3);
+position: absolute;
+top: 0;
+z-index: 9;
+transition: all 1s ease 0s;
+justify-content: center;
+
+	&__body {
+		top: 100px;
+		flex: 0 1 350px;
+		height: 230px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: rgb(179, 170, 170);
+		border-radius: 30px;
+		margin: 0px 20px 0px 20px ;
+		z-index: 10;
+	}
+
+
+	&__block-title{
+		display: flex;
+		text-align: center;
+
+	}
+	&__close-button{
+		cursor: pointer;
+		display: block;
+		width: 30px;
+		height: 30px;
+		color: rgb(190, 81, 8);
+		font-size: 30px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		
+	}
+	&__close-button:hover{
+		box-shadow: 0 0 10px black;
+	}
+
+	&__title {
+		padding: 20px 0px 10px 0px ;
+		text-align: center;
+		font-size: 27px;
+		color: rgb(255, 255, 255);
+		font-family:"Montserrat";
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&__item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 10px 0px 0px 0px ;
+	}
+
+	&__lable {
+		font-size: 18px;
+		display: block;
+		font-family:"Montserrat";
+		font-weight: 600;
+	}
+
+	&__input {
+		font-size: 18px;
+		display: block;
+		height: 25px;
+	}
+	&__input:focus{
+		box-shadow: 0 0 15px rgb(230, 97, 36);
+	}
+	&__input:hover{
+		box-shadow: 0 0 10px black;
+	}
+
+	
+	&__button{
+margin: 10px 0px 20px 0px;
+width: 100px;
+height: 30px;
+background-color: rgb(189, 75, 0);
+display: flex;
+align-items: center;
+justify-content: center;
+color: bisque;
+	}
+	&__button:hover{
+background-color: rgb(66, 27, 0);
+transition: 0.4s;
+	}
+}
 

@@ -34,9 +34,8 @@ padding: 10px 0px 0px 0px ;
 		width: 231px;
 		height: 84px;
 		background-color:#1A1A1A;
-		:hover{
-			color: #EE7444;
-			}
+		box-shadow: 0 4px 0 black;
+		border-radius: 10px;
 		span{
 			font-family: Montserrat;
 			font-weight: 600;
@@ -45,8 +44,19 @@ padding: 10px 0px 0px 0px ;
 			text-transform: uppercase;
 			color: #FFFFFF;
 			}
-			
+		
     }
+
+
+	&__btn:hover {
+			background-color: #EE7444;
+			transition: 0.4s;
+			box-shadow: 0 6px 0px black;
+			span{
+				color:#1A1A1A ;
+				font-weight: 900;
+			}
+	}
 
 }
 
@@ -104,5 +114,10 @@ padding: 10px 0px 0px 0px ;
         text-transform: uppercase;
         color: #EE7444;
 		margin-bottom: 58px;
+	}
+	&__button:hover{
+		color: #1A1A1A;
+		box-shadow: 0 0 10px #1A1A1A;
+		transition: 0.4s;
 	}
 }

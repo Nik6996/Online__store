@@ -1,7 +1,4 @@
 .header {
-}
-.header-content {
-
 		&__content {
 			display: flex;
 		}
@@ -51,61 +48,7 @@
 		}
 }
 
-.nav-header {
-
-// 	&__burger {
-// 		cursor: pointer;
-// 		margin: 0px 20px 0px 20px ;
-// 		z-index: 3;
-// 		display: block;
-// 		position: relative;
-// 		min-width: 30px;
-// 		height: 20px;
-// 		top: -10px;
-// 		left: 10px;
-// 	}
-
-// 	&__burger span{
-// 	position: absolute;
-// 	background-color: #ee7444;
-// 	width: 100%;
-// 	height: 3px;
-// 	left: 0;
-// 	top: 9px;
-// }
-
-// 	&__burger::after,
-// 	&__burger::before{
-// 		content:'';
-// 		transition: all 0.2s ease 0s;
-// 		background-color:#ee7444;
-// 		position: absolute;
-// 		width: 100%;
-// 		height: 3px;
-// 	}
-// 	&__burger::after{
-// 		bottom: 0;
-		
-// 	}
-// 	&__burger::before{
-// 		top: 0;
-// 	}
-
-// 	&__burger.active::before{
-// 		transform: rotate(45deg);
-// 		top: 9px;
-		
-// 	}
-// 	&__burger.active::after{
-// 		transform: rotate(-45deg);
-// 		top: 9px;
-		
-// 	}
-// 	&__burger.active span{
-// 		display: none;
-		
-// 	}
-
+.header-nav {
 
         &__column{
         display: flex;
@@ -121,20 +64,7 @@
 			@media (max-width: 650px) {
 				display: none;
 			}
-		}
-		// &__burger {
-		// 	cursor: pointer;
-		// 	width: 158px;
-		// 	height: 58px;
-		// 	background-color:#EE7444;
-		// 	color: white;
-		// 	text-align: center;
-		//     line-height: 57px;
-		// 	font-family: Montserrat;
-        //     font-weight: 600;
-        //     font-size: 18px;
-            
-		// }
+		}		
 
 		&__facebook {
 			width: 56px;
@@ -143,6 +73,12 @@
             border-radius: 50%;
 			padding: 15px 2px 0px 0px ;
 		}
+		&__facebook:hover , &__instagram:hover{
+			background-color: rgb(73, 66, 66);
+			box-shadow: 0 0 15px #777;
+			transition: 0.4s;
+		}
+		
 
 		&__instagram {
 			width: 56px;
@@ -153,30 +89,6 @@
 			margin-left: 16px;
 		}
 
-		// &__leng {
-		// 	position: relative;
-		// 	width: 116px;
-		// 	height: 58px;
-        //     border: 5px solid #EE7444;
-		// 	cursor: pointer;
-		// 	@media (max-width: 550px ){
-				
-		// 	}
-		// 	span{
-		// 		position: absolute;
-		// 		top: 15px;
-		// 		left: 20px;
-		// 	    font-family: Montserrat;
-        //         font-weight: 600;
-        //         font-size: 18px;
-		// 	}
-		// 	img{
-		// 		display: block;
-		// 		position: absolute;
-		// 		top: 17px;
-		// 		right: 19px;
-		// 	}
-		// }
 }
 
 .contacts-header {
@@ -190,6 +102,11 @@
             text-align: center;
             text-transform: uppercase;
 	    }
+		&__phone:hover{
+			color: rgb(10, 10, 20);
+			box-shadow: 0 0 10px rgb(13, 13, 26);
+			transition: 0.4s;
+		}
 
 		&__contacts{
 			width: 58px;
@@ -224,10 +141,13 @@
 		
 
 		&__person {
+			position: relative;
+			cursor: pointer;
 			display: block;
 			width: 58px;
 			height: 58px;
             border: 5px solid #EE7444;
+			z-index: 9;
 			img{
 				padding-top: 11px;
 			}
@@ -236,8 +156,22 @@
 				height: 46px;
 			}
 		}
+		&__person:hover , &__curt:hover {
+			box-shadow: 0 0 15px #777;
+			border: 5px solid rgb(73, 66, 66);
+			background-color:#EE7444 ;
+			transition: 0.4s;
+		}
+		
+		&__person.active{
+			box-shadow: 0 0 15px #777;
+			border: 5px solid rgb(73, 66, 66);
+			background-color:#EE7444 ;
+			transition: 0.4s;
+		}
 
 		&__curt {
+			cursor: pointer;
 			position: relative;
 			display: block;
 			width: 58px;
@@ -258,11 +192,16 @@
 				background-color:#EE7444;
 				font-size: 16px;
 				color: #FFFFFF;
-				
 			}
 			@media (max-width: 450px) {
 				width: 46px;
 				height: 46px;
+			}
+		}
+		&__curt:hover{
+			span{
+					background-color: rgb(73, 66, 66);
+					transition: 0.4s;
 			}
 		}
 }
@@ -270,13 +209,13 @@
 .burger {
 	overflow: scroll;
 	position: fixed;
-	top: -200%;
+	opacity: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 1000px;
 	background-color: black;
-	z-index: 10;
-	transition: all 0.4s ease 0s;
+	z-index: -1;
+	transition: all 0.8s ease 0s;
 	&__menu {
 		display: flex;
 		justify-content: center;
@@ -287,11 +226,12 @@
 			margin: 10px 0px 0px 0px ;
 			:hover{
 				color: #ee7444;
+				transition: 0.4s;
 			}
 		}
 	}
 
-	&__list {
+	&__link {
 		color: white;
 		font-size: 25px;
 
@@ -299,54 +239,24 @@
 }
 
 .burger.active{
-top: 0;
+opacity: 1;
 transition: all 0.4s ease 0s;
+z-index: 10;
+
 }
 
 
 @media (max-width: 1000px ){
 
-// 	.burger {
-// 		position: fixed;
-// 		top: -100%;
-// 		left: 0;
-//         width: 100%;
-//         height: 100%;
-//         background-color: black;
-// 		z-index: 3;
-// 		transition: all 0.4s ease 0s;
-// 		&__menu {
-// 			display: flex;
-// 			justify-content: center;
-// 			align-items: center;
-// 			height: 600px;
-// 			li{
-// 				margin: 10px 0px 0px 0px ;
-// 			}
-// 		}
 
-// 		&__list {
-// 			color: white;
-// 			font-size: 25px;
-// 			:hover{
-// 				color: #ee7444;
-// 			}
-// 		}
-// }
 
-// .burger.active{
-// 	top: 0;
-// 	transition: all 0.4s ease 0s;
-// }
-
-	.nav-header {
-
+	.header-nav {
 &__menu{
 	display: none;
 }
 
 		&__burger {
-			z-index: 3;
+			z-index: 10;
 			display: block;
 			position: relative;
 			min-width: 40px;
@@ -354,6 +264,9 @@ transition: all 0.4s ease 0s;
 			top: 0px;
 			left: 30px;
 			
+		}
+		&__burger.burger.active{
+			position: fixed;
 		}
 
         &__burger span{
@@ -399,7 +312,7 @@ transition: all 0.4s ease 0s;
 }
 
 
-	.nav-header{
+	.header-nav{
 		&__icon{
 			display: none;
 			
@@ -422,7 +335,7 @@ transition: all 0.4s ease 0s;
 
 
 @media (min-width: 1001px ){
-	.nav-header {
+	.header-nav {
 		&__menu{
 		color: white;
 		text-align: center;
@@ -431,13 +344,20 @@ transition: all 0.4s ease 0s;
 		font-weight: 600;
 		font-size: 18px;
 		}
+
 	&__burger {
 		cursor: pointer;
 		width: 158px;
 		height: 58px;
 		background-color:#EE7444;
-		z-index: 10;
+		z-index: 8;
 	}
+	&__burger:hover{
+		background-color: rgb(73, 66, 66);
+		box-shadow: 0 0 15px #777;
+		transition: 0.4s;
+	}
+
 	&__burger.active{
 		position: relative;
 		width: 50px;
@@ -445,6 +365,7 @@ transition: all 0.4s ease 0s;
 		left: 40px;
 		background-color: black;
 		transition: all 0.3s ease 0s;
+		z-index: 10;
 	}
 
 	&__burger.active::after,
