@@ -7,15 +7,18 @@
 		</div>
 		<div class="login__item">
 			<lable for="loginName" class="login__lable">Имя*:</lable>
-			<input id="loginName" type="text" name="name" class="login__input">
+			<input id="loginName" type="text" name="name" class="login__input _require">
 		</div>
 		<div class="login__item">
 			<label for="loginPhone" class="login__lable">Номер телефона*:</label>
-			<input id="loginPhone" class="login__input" name="phone" type="text">
+			<input id="loginPhone" placeholder=" 0951234567" class="login__input _require _phone" name="phone"
+				type="text">
 		</div>
-		<button type="submit" class="login__button">Отправить</button>
+		<div class="login__item">
+			<button type="submit" class="login__button">Отправить</button>
+		</div>
 	</form>
-	<div class="fon"></div>
+
 </div>
 
 <header class="header">

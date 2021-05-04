@@ -69,8 +69,9 @@
 display: flex;
 flex-wrap: wrap;
 	&__column {
-flex: 1 1 auto;
-
+		position: relative;
+        flex: 1 1 auto;
+        z-index: 4;
 p{
 	width: auto;
 	font-size: 25px;
@@ -88,7 +89,22 @@ padding: 30px 0px 0px 0px ;
 
 	&__body {
 		margin: 0 auto;
-
+	}
+	&__body::after{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(211, 206, 211, 0.3) url("../img/7VE.gif") center /150px  no-repeat ;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.7s ease 0s;
+	}
+	&__body._sending::after{
+		opacity: 1;
+		visibility: visible;
 	}
 
 	&__title {
@@ -131,21 +147,22 @@ margin: 0px 0px 30px 0px ;
 		box-shadow: 0 0 15px #777;
 	}
 
+
 	&__button {
 		margin: 20px 0px 0px 0px ;
 		width: 100%;
 		min-height: 80px;
 		border-radius: 10px;
-		background-color: rgb(157, 201, 90);
-		color:white;
+		background-color: rgb(219, 112, 11);
+		color:rgb(0, 0, 0);
         font-size: 25px;
 		box-shadow: 0 5px 0 black;
-		transition: background-color  1.9s;
+		transition: background-color  0.5s;
 		
 	}
 	&__button:hover{
-		background-color: rgb(54, 218, 182);
-		color: black;
+		background-color: rgb(90, 49, 2);
+		color: rgb(255, 255, 255);
 		
 	}
 
@@ -179,22 +196,24 @@ cursor: pointer;
 		margin-right: 10px;
         flex: 0 0 24px;
         height: 24px;
-        background-color: brown;
-        border-radius: 4px;
-		
+        border-radius: 8px;
+		border: solid 3px blue;
 	}
 	&__lable::after{
 		transition: transform 0.5s;
 		content: '';
-    width: 16px;
-	height: 16px;
+    width: 18px;
+	height: 18px;
 	position: absolute;
-	top: 4px;
-	left: 4px;
-	background-color: green;
-	border-radius: 4px;
+	top: 3px;
+	left: 3px;
+	background-color: rgb(211, 102, 0);
+	border-radius: 5px;
 	transform: scale(0);
 	}
+}
+.checkbox._error .checkbox__lable::before{
+	box-shadow: 0 0 15px red;
 }
 
 
@@ -211,18 +230,17 @@ cursor: pointer;
 .login { 
 	display: none;
 width: 100%;
-height: 100%;
+height: 900px;
 background-color: rgba(255, 244, 255, 0.3);
 position: absolute;
 top: 0;
 z-index: 9;
-transition: all 1s ease 0s;
 justify-content: center;
 
 	&__body {
 		top: 100px;
 		flex: 0 1 350px;
-		height: 230px;
+		height: 240px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -231,8 +249,25 @@ justify-content: center;
 		border-radius: 30px;
 		margin: 0px 20px 0px 20px ;
 		z-index: 10;
+		transition: all 1s ease 0s;
 	}
+	&__body::after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(211, 206, 211, 0.3) url("../img/ZKZx.gif") center /50px no-repeat;
+	    opacity: 0;
+		visibility: hidden;
 
+	}
+&__body._sending::after{
+	content: '';
+	opacity: 1;
+	visibility: visible;
+}
 
 	&__block-title{
 		display: flex;
@@ -283,6 +318,13 @@ justify-content: center;
 		font-size: 18px;
 		display: block;
 		height: 25px;
+		margin: 4px 0px 0px 0px ;
+		padding: 0px 0px 0px 10px ;
+		border: solid 1px blue;
+		border-radius: 10px;
+	}
+	&__input._error{
+		box-shadow: 0 0 10px red;
 	}
 	&__input:focus{
 		box-shadow: 0 0 15px rgb(230, 97, 36);
@@ -301,6 +343,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: bisque;
+border-radius: 13px;
 	}
 	&__button:hover{
 background-color: rgb(66, 27, 0);
