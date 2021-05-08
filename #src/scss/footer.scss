@@ -7,6 +7,10 @@ padding-top: 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
+		@media (max-width: 520px) {
+			padding: 30px 0px 20px 0px ;
+			height: 278px;
+		}
 	}
 
 	&__top {
@@ -19,9 +23,11 @@ padding-top: 20px;
 	font-family: Montserrat;
     font-weight: 600;
     font-size: 24px;
-    line-height: 34px;
     text-transform: uppercase;
     color: #FFFFFF;
+	@media (max-width: 520px ) {
+		font-size: 20px;
+	}
 	}
 
 	&__facebook {
@@ -34,6 +40,17 @@ padding-top: 20px;
 		img{
 			position: relative;
 			top: 12px;
+		}
+		
+	}
+	&__facebook,&__instagram{
+		@media (max-width: 520px ) {
+			width: 46px;
+			height: 46px;
+			img{
+				position: relative;
+				top: 9px;
+			}
 		}
 	}
 
@@ -54,28 +71,36 @@ padding-top: 20px;
 		transition: 0.4s;
 	}
 
-	&__links {
-	}
+	
 
 	&__list {
 		display: flex;
 		justify-content: center;
 		margin: 0 auto;
+		text-align: left;
 		flex-wrap: wrap;
-	}
-
-	&__link {
-margin: 0px 24px 0px 0px ;
-font-family: Teko;
-font-style: normal;
-font-weight: normal;
+		a{
+			color: white;
+		}
+		li{
+			margin: 0px 24px 0px 0px ;
+			font-family: Teko;
 font-size: 20px;
 line-height: 24px;
-text-align: center;
-letter-spacing: 1.5px;
 text-transform: uppercase;
-color: #FFFFFF;
+		}
+		:last-child{
+				margin: 0;
+			}
+			@media (max-width: 520px ) {
+				li{
+					margin: 0px 14px 0px 0px ;
+				}
+			}
 	}
+
+
+
 
 	&__bottom {
 font-family: Overpass Mono;

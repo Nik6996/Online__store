@@ -11,6 +11,9 @@
 		display: flex;
 		justify-content: space-around;
 		padding: 80px 0px 127px 0px;
+		@media (max-width: 470px) {
+			padding: 80px 0px 37px 0px;
+		}
 	}
 
 
@@ -44,10 +47,14 @@ padding: 10px 0px 0px 0px ;
 			text-transform: uppercase;
 			color: #FFFFFF;
 			}
-		
+			@media (max-width: 470px) {
+				width: 200px;
+				height: 70px;
+				box-shadow: none;
+			}
     }
 
-
+	@media (min-width: 760px) {
 	&__btn:hover {
 			background-color: #EE7444;
 			transition: 0.4s;
@@ -57,7 +64,7 @@ padding: 10px 0px 0px 0px ;
 				font-weight: 900;
 			}
 	}
-
+}
 }
 
 
@@ -68,7 +75,6 @@ padding: 10px 0px 0px 0px ;
 	flex: 1 1 auto;
 	flex-wrap: wrap;
     max-width: 519px;
-    min-height: 735px;
 	height: auto; 
 	background-color:white ;
 	&__container {
@@ -94,14 +100,19 @@ padding: 10px 0px 0px 0px ;
         line-height: 29px;
         text-transform: uppercase;
         color: #1A1A1A;
+		margin: 0px 10px 0px 0px ;
 	}
 
 	&__content {
-		padding: 27px 0px 52px 0px ;
+		padding: 27px 10px 52px 0px ;
 		font-family: Montserrat;
         font-size: 14px;
         line-height: 26px;
         color: #6B6966;
+		@media (max-width: 470px) {
+			padding: 40px 10px 25px 0px;
+			;
+		}
 	}
 
 	&__button {
@@ -114,6 +125,9 @@ padding: 10px 0px 0px 0px ;
         text-transform: uppercase;
         color: #EE7444;
 		margin-bottom: 58px;
+		@media (max-width: 470px) {
+			margin-bottom: 30px;
+		}
 	}
 	&__button:hover{
 		color: #1A1A1A;

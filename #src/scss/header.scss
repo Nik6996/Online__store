@@ -15,7 +15,7 @@
 			background-color: rgb(255, 255, 255);
 			border-radius: 50%;
 			padding: 8px 0px 0px 0px ;
-			z-index: 2;
+			z-index: 1;
 			img{
 			@media (max-width: 450px) {
 			max-width: 110px;
@@ -34,7 +34,7 @@
 		}
 
 		&__logo {
-			
+
 		}
 
 		&__contacts {
@@ -73,11 +73,19 @@
             border-radius: 50%;
 			padding: 15px 2px 0px 0px ;
 		}
+
+		@media (min-width: 1024px) {
 		&__facebook:hover , &__instagram:hover{
 			background-color: rgb(73, 66, 66);
 			box-shadow: 0 0 15px #777;
 			transition: 0.4s;
 		}
+			}
+
+			&__facebook:focus , &__instagram:focus{
+				background-color: rgb(73, 66, 66);
+			}
+		
 		
 
 		&__instagram {
@@ -102,11 +110,14 @@
             text-align: center;
             text-transform: uppercase;
 	    }
-		&__phone:hover{
+		@media (min-width: 1024px) {
+				&__phone:hover{
 			color: rgb(10, 10, 20);
 			box-shadow: 0 0 10px rgb(13, 13, 26);
 			transition: 0.4s;
+		}	
 		}
+
 
 		&__contacts{
 			width: 58px;
@@ -147,23 +158,46 @@
 			width: 58px;
 			height: 58px;
             border: 5px solid #EE7444;
-			z-index: 9;
+			
 			img{
 				padding-top: 11px;
 			}
 			@media (max-width: 450px) {
 				width: 46px;
 				height: 46px;
+				img{
+					padding-top: 7px;
+				}
 			}
 		}
+		@media (max-width: 1024px){
+		&__person:focus , &__curt:focus{
+			background-color:#EE7444 ;
+		}
+	}
+		@media (min-width: 1024px) {
+			&__curt:hover{
+				span{
+						background-color: rgb(73, 66, 66);
+						transition: 0.4s;
+				}
+			}
+
+			&__phone:hover{
+		color: rgb(10, 10, 20);
+		box-shadow: 0 0 10px rgb(13, 13, 26);
+		transition: 0.4s;
+	}	
+	
 		&__person:hover , &__curt:hover {
 			box-shadow: 0 0 15px #777;
 			border: 5px solid rgb(73, 66, 66);
 			background-color:#EE7444 ;
 			transition: 0.4s;
 		}
-		
+		}
 		&__person.active{
+			z-index: 10;
 			box-shadow: 0 0 15px #777;
 			border: 5px solid rgb(73, 66, 66);
 			background-color:#EE7444 ;
@@ -198,28 +232,22 @@
 				height: 46px;
 			}
 		}
-		&__curt:hover{
-			span{
-					background-color: rgb(73, 66, 66);
-					transition: 0.4s;
-			}
-		}
+
 }
 
 .burger {
-	overflow: scroll;
+	overflow: hidden;
 	position: fixed;
 	opacity: 0;
 	left: 0;
 	width: 100%;
-	height: 1000px;
+	height: 100%;
 	background-color: black;
 	z-index: -1;
 	transition: all 0.8s ease 0s;
 	&__menu {
 		display: flex;
 		justify-content: center;
-		
 		height: 600px;
 		padding: 80px 0px 0px 0px ;
 		li{
@@ -239,10 +267,11 @@
 }
 
 .burger.active{
+	
 opacity: 1;
 transition: all 0.4s ease 0s;
 z-index: 10;
-
+overflow: hidden;
 }
 
 
@@ -335,6 +364,7 @@ z-index: 10;
 
 
 @media (min-width: 1001px ){
+	
 	.header-nav {
 		&__menu{
 		color: white;
@@ -352,11 +382,15 @@ z-index: 10;
 		background-color:#EE7444;
 		z-index: 8;
 	}
-	&__burger:hover{
+	@media (min-width: 1024px) {
+		&__burger:hover{
 		background-color: rgb(73, 66, 66);
 		box-shadow: 0 0 15px #777;
 		transition: 0.4s;
 	}
+	}
+	
+	
 
 	&__burger.active{
 		position: relative;

@@ -9,26 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		let error = formValidate(form);
 
 
-		// let formData = new FormData(form);
+		let formData = new FormData(form);
 		// formData.append();
 
 		if (error === 0) {
 
-			alert("все ок");
 			form.classList.add('_sending');
-			let response = await fetch('sendmail.php', {
-				method: 'POST',
-				body: formData
-			});
-			if (response.ok) {
-				let response = await response.json();
-				alert(result.message);
-				form.reset();
-				form.classList.remove('_sending');
-			} else {
-				alert('ошибка отправки формы')
-				form.classList.remove('_sending');
-			}
+			// let response = await fetch('sendmail.php', {
+			// 	method: 'POST',
+			// 	body: formData
+			// });
+			// if (response.ok) {
+			// 	let response = await response.json();
+			// 	alert(result.message);
+			// 	form.reset();
+			// 	form.classList.remove('_sending');
+			// } else {
+			// 	alert('ошибка отправки формы')
+			// 	form.classList.remove('_sending');
+			// }
 
 		} else {
 			alert('заполните форму');
@@ -94,25 +93,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('login');
 	form.addEventListener('submit', formSend);
 
+	let formData = new FormData(form);
+
 	async function formSend(e) {
 		e.preventDefault();
 		let error = formValidate(form);
 		if (error === 0) {
-			alert("все ок");
 			form.classList.add('_sending');
 			let response = await fetch('sendmail.php', {
 				method: 'POST',
 				body: formData
 			});
-			if (response.ok) {
-				let response = await response.json();
-				alert(result.message);
-				form.reset();
-				form.classList.remove('_sending');
-			} else {
-				alert('ошибка отправки формы')
-				form.classList.remove('_sending');
-			}
+			// if (response.ok) {
+			// 	let response = await response.json();
+			// 	alert(result.message);
+			// 	form.reset();
+			// 	form.classList.remove('_sending');
+			// } else {
+			// 	alert('ошибка отправки формы')
+			// 	form.classList.remove('_sending');
+			// }
 		}
 	}
 	function formValidate(form) {
