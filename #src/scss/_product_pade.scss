@@ -41,7 +41,7 @@
 	font-size: 14px;
 	line-height: 26px;
 	color: #6B6966;
-	@media (max-width: 700px) {
+	@media (max-width: 500px) {
 		margin: 10px 0px 0px 0px ;
 	}
 		}
@@ -51,10 +51,13 @@
 	font-size: 14px;
 	line-height: 26px;
 	color: #6B6966;
+	@media (max-width: 768px) {
+		line-height: 20px;
+	}
 		}
 	
 		&__quantity {
-			
+			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -63,9 +66,11 @@
 	border: 5px solid #F6F5F1;
 	box-sizing: border-box;
 	border-radius: 0px;
-	@media (max-width: 700px) {
-		width: 75px;
-		height: 50px;
+	@media (max-width: 500px) {
+		width: 70px;
+		height: 30px;
+		margin: 0px 20px 0px 0px ;
+		font-size: 12px;
 	}
 			span{
 	font-family: Montserrat;
@@ -73,9 +78,36 @@
 	font-size: 18px;
 	line-height: 22px;
 	text-transform: uppercase;
-	color: #000000;
 			}
 		}
+		&__more{
+			cursor: pointer;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: #EE7444;
+		}
+		&__less{
+			cursor: pointer;
+			position: absolute;
+			bottom: 2px;
+			right: 2px;
+			color: #EE7444;
+		}
+
+	
+		@media (max-width: 500px) {
+	    &__more{
+        top: 0;
+		}
+		&__less{
+			display: block;
+			width: 20px;
+			top: 0;
+			left: 0;
+			}
+		}
+		
 	
 		&__btn {
 			cursor: pointer;
@@ -83,17 +115,18 @@
 	height: 60px;
 	background-color: #EE7444;
 	display: flex;
+	font-size: 18px;
 	justify-content: center;
 	align-items: center;
-	@media (max-width: 700px) {
-		width: 100px;
-		height: 50px;
+	@media (max-width: 500px) {
+		width: 70px;
+		height: 30px;
 		margin: 0px 20px 0px 0px ;
+		font-size: 12px;
 	}
 	span{
 	font-family: Montserrat;
 	font-weight: 600;
-	font-size: 18px;
 	line-height: 22px;
 	text-align: center;
 	text-transform: uppercase;
@@ -101,7 +134,8 @@
 	transition: 0.4s;
 	}
 		}
-		&__btn:hover{
+		@media (min-width: 700px) {
+			&__btn:hover{
 			background-color: #EE7444 ;
 			transition: 0.4s;
 			box-shadow: 0px 0px 15px #EE7444;
@@ -109,6 +143,8 @@
 				color: black
 			}
 		}
+		}
+		
 	
 		&__price {
 	font-family: Montserrat;
@@ -116,10 +152,10 @@
 	font-size: 36px;
 	line-height: 26px;
 	color: #EE7444;
-	margin: 0px 0px 38px 0px ;
+	margin: 10px 0px 38px 0px ;
 	@media (max-width: 700px) {
 		font-size: 26px;
-		margin: 0px 0px 15px 0px ;
+		margin: 10px 0px 15px 0px ;
 	}
 		}
 		&__btns{
@@ -132,34 +168,46 @@
 	
 
 	.extra {
-		padding: 45px 0px 180px 0px ;
+		padding: 45px 0px 100px 0px ;
 	background: url(../img/Background.jpg);
-	width: 100%;
+	margin: 0 auto;
+	max-width: 1370px;
 	
 		&__body {
 			margin: 0 auto;
-			
 			padding: 40px 0px 0px 0px ;
+			@media (max-width: 767px) {
+				padding: 0px 0px 0px 0px ;
+			}
 		}
 	
-		&__slider {
-			height: 520px;
-		}
 		&__btn{
 			display: flex;
 			justify-content: center;
-			:hover{
-				color: black;
+			align-items: center;
+			@media (min-width: 765px) {
+				:hover{
+					color: black;
+				}
 			}
 		}
 		&__next,&__prev{
 	position: relative;
-	top: -30px;
+	top: 25px;
 	font-size: 60px;
 	color: chocolate;
 	cursor: pointer;
 		}
 		&__prev{
-	margin: 0px 50px 0px 0px ;
+	margin: 0px 80px 0px 0px ;
+	transform: rotate(180deg);
+	@media (max-width: 765px) {
+		margin: 0px 30px 0px 0px ;
+	}
 		}
 	}
+
+	.text-logo-more{
+		font-size: calc(9px + 80 * (100vw / 1370));
+	}
+	
