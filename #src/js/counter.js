@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	document.getElementById("buttonCountPlus").onclick = function () {
 		let countPlus = count.innerHTML;
-		console.log(countPlus);
 		if (+countPlus <= 9) {
 			count.innerHTML++;
 			let countPlus = count.innerHTML;

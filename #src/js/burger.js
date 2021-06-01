@@ -8,18 +8,21 @@ let loginBtn = document.querySelector('.bar-header__person');
 let loginBtn2 = document.querySelector('.login');
 let closeLogin = document.querySelector('.login__close-button');
 let closeLoginBtn = document.querySelector(".login");
+let hiddenBody = document.querySelector("body");
 //==============================================================БУРГЕР===========================================================
 
 burgerBtn.addEventListener("click", function (e) {
 	burgerBtn.classList.toggle('active');
 	burgerBtn1.classList.toggle('active');
 	burgerBtn2.classList.toggle('active');
+	hiddenBody.classList.toggle('lock');
 });
 
 burgerBtnClose.addEventListener('click', function (e) {
 	burgerBtn1.classList.remove('active');
 	burgerBtn2.classList.remove('active');
 	burgerBtn.classList.remove('active');
+	hiddenBody.classList.remove('lock');
 });
 
 // $(document).ready(function () {
@@ -40,6 +43,7 @@ closeLogin.addEventListener('click', function (e) {
 	closeLogin.classList.remove('active');
 	closeLoginBtn.classList.remove('active');
 	loginBtn.classList.remove('active');
+	hiddenBody.classList.remove('lock');
 })
 // $(document).ready(function () {
 // 	$('.bar-header__person').click(function () {
@@ -66,18 +70,5 @@ closeLogin.addEventListener('click', function (e) {
 
 
 
-
-//      ЗАТЕСТИТЬ СЧЕТЧИК И РАЗОБРАТЬ!!!=============================================================
-
-
-
-
-
-
-
-
-
-
-//===========================================================================================================================================
 
 
